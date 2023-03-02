@@ -4,7 +4,7 @@ import tw from "twin.macro";
 import { ReactComponent as SvgDotPatternIcon } from "../../images/dot-pattern.svg";
 import { SectionHeading as HeadingTitle } from "../misc/Headings.js";
 
-import conseil from "../../img/conseil.png"
+
 
 
 
@@ -50,8 +50,7 @@ export default () => {
   const cards = [
     {
       imageSrc:
-      "https://www.paysage-sharon.lu/wp-content/uploads/2023/01/Creation-terrasse.jpg",
-      subtitle: "Création de terrasses :",
+      "https://i.imgur.com/ImHPE2u.png",
       title: "Création de terrasses :",
       description:
         "Nous créons des terrasse en bois «sur-mesure », afin de vous faire profiter des meilleurs moments de détente en extérieur. Nous pouvons réaliser différentes terrasse avec différentes matériaux dont  la terrasse en WPC (composite bois-polymère) et bois exotique en vous conseillant sur les technique dentretien pour maintenir votre terrasse en parfait état. Nous nous chargeons de la maîtrise dœuvre, du suivi des travaux à la réception des travaux « clef en main » en vous aidant à aménager votre terrasse pour créer un espace extérieur structuré, beau et qui vous correspond.",
@@ -60,7 +59,7 @@ export default () => {
 
     {
       imageSrc:
-        "https://www.paysage-sharon.lu/wp-content/uploads/2023/02/News-Petits-travaux-de-maconnerie-paysagere.jpg",
+        "https://scontent.ftun2-2.fna.fbcdn.net/v/t1.15752-9/334561142_1395145854622505_4078904557186077930_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=ae9488&_nc_ohc=QVs2hHVlNQoAX9ycbK0&_nc_ht=scontent.ftun2-2.fna&oh=03_AdS1AQpTeR2COIVJ-m2G6g47OY0KthckjuKICzhJRoTtfQ&oe=6427CD5F",
       subtitle: "Petits travaux de maçonnerie paysagère",
       title: "Petits travaux de maçonnerie paysagère : ",
       description:
@@ -70,7 +69,7 @@ export default () => {
 
     {
       imageSrc:
-        "https://www.paysage-sharon.lu/wp-content/uploads/2023/01/Brise-vue.jpg",
+        "https://scontent.ftun2-2.fna.fbcdn.net/v/t1.15752-9/334635545_671733824706830_4472642235786097050_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=ae9488&_nc_ohc=a0ry82LViOgAX8-t-aU&_nc_ht=scontent.ftun2-2.fna&oh=03_AdTsNXC0-tSG2fOB5OdnGpoe2ao2zhh8tUCQc2nLKyzX3w&oe=6427D04B",
       subtitle: "Brises vues, espaliers, clôtures rigides",
       title: "Brises vues, espaliers, clôtures rigides :",
       description:
@@ -110,10 +109,9 @@ export default () => {
     <Container id="About">
       <SingleColumn>
         <HeadingInfoContainer>
-          <HeadingTitle>Notre passion</HeadingTitle>
+          <HeadingTitle>Nos <span style={{ color: "green" }}> Services</span></HeadingTitle>
           <HeadingDescription>
-          vous accompagner dans votre développement et vous apporter  les  solutions  les  plus  adaptées  à  vos problématiques. <br />
-          La communication est un métier nécessitant rigueur, méthode,  recherche,  réflexion,  créativité…  Et  ce, pour  vous  fournir  des  prestations  de  qualité  et toucher vos cibles.
+          Notre équipe de professionnels expérimentés est à l'écoute de vos besoins et vous accompagne tout au long du processus, de la conception à la réalisation.  <br /> N'hésitez pas à nous contacter pour toute demande de renseignements ou de devis.   <br />
           </HeadingDescription>
         </HeadingInfoContainer>
 

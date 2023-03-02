@@ -62,7 +62,7 @@ const DecoratorBlob2 = tw(SvgDotPatternIcon)`absolute top-0 right-0 w-32 h-32 mt
 
 export default ({
   subheading = "",
-  heading = "Nos Articles",
+  heading = "Nos Réalisations",
   description = "",
   posts = [
     {
@@ -113,7 +113,7 @@ export default ({
       <ContentWithPaddingXl>
         <HeadingContainer>
           {subheading && <Subheading>{subheading}</Subheading>}
-          {heading && <Heading>{heading}</Heading>}
+          {heading && <Heading> <span style={{ color: "green" }}> {heading}</span></Heading>}
           {description && <Description>{description}</Description>}
         </HeadingContainer>
         <Posts>

@@ -101,13 +101,11 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 // import TermsOfServicePage from "pages/TermsOfService.js";
 // import PrivacyPolicyPage from "pages/PrivacyPolicy.js";
 
-// import ComponentRenderer from "ComponentRenderer.js";
-// import MainLandingPage from "MainLandingPage.js";
-// import ThankYouPage from "ThankYouPage.js";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-// import Youssef from "youssef";
+
 import Explore from "Explore";
+import AboutUs from "pages/AboutUs";
 
 export default function App() {
   // If you want to disable the animation just use the disabled `prop` like below on your page's component
@@ -129,6 +127,9 @@ export default function App() {
         <Route path="/">
           <MainLandingPage />
         </Route> */}
+                  <Route path="/aboutus">
+          <AboutUs />
+        </Route>
           <Route path="/">
           <Explore />
         </Route>

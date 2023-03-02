@@ -15,7 +15,7 @@ export default function Explore() {
 {/* <Headerr /> */}
 <Hero />
 <AboutUs />
-<Services/>
+{/* <Services/> */}
 
 <Features />
 <Blog />

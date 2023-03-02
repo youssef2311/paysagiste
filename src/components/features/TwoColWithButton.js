@@ -2,29 +2,34 @@ import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
-import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
+import {
+  SectionHeading,
+  Subheading as SubheadingBase,
+} from "components/misc/Headings.js";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import TeamIllustrationSrc from "images/team-illustration-2.svg";
-import {ReactComponent as SvgDotPattern } from "images/dot-pattern.svg"
+import { ReactComponent as SvgDotPattern } from "images/dot-pattern.svg";
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center`;
 const Column = tw.div`w-full max-w-md mx-auto md:max-w-none md:mx-0`;
 const ImageColumn = tw(Column)`md:w-6/12 flex-shrink-0 relative`;
-const TextColumn = styled(Column)(props => [
+const TextColumn = styled(Column)((props) => [
   tw`md:w-6/12 mt-16 md:mt-0`,
-  props.textOnLeft ? tw`md:mr-12 lg:mr-16 md:order-first` : tw`md:ml-12 lg:ml-16 md:order-last`
+  props.textOnLeft
+    ? tw`md:mr-12 lg:mr-16 md:order-first`
+    : tw`md:ml-12 lg:ml-16 md:order-last`,
 ]);
 
-const Image = styled.img(props => [
+const Image = styled.img((props) => [
   props.imageRounded && tw`rounded`,
   props.imageBorder && tw`border`,
   props.imageShadow && tw`shadow`,
 ]);
 
-const DecoratorBlob = styled(SvgDotPattern)(props => [
+const DecoratorBlob = styled(SvgDotPattern)((props) => [
   tw`w-20 h-20 absolute right-0 bottom-0 transform translate-x-1/2 translate-y-1/2 fill-current text-primary-500 -z-10`,
-])
+]);
 
 const TextContent = tw.div`lg:py-8 text-center md:text-left`;
 
@@ -34,22 +39,20 @@ const Heading = tw(
 )`mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight`;
 const Description = tw.p`mt-4 text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100`;
 
-const PrimaryButton = styled(PrimaryButtonBase)(props => [
+const PrimaryButton = styled(PrimaryButtonBase)((props) => [
   tw`mt-8 md:mt-8 text-sm inline-block mx-auto md:mx-0`,
-  props.buttonRounded && tw`rounded-full`
+  props.buttonRounded && tw`rounded-full`,
 ]);
-
 
 export default ({
   subheading = "Notre Entreprise",
   heading = (
     <>
-      Notre<span style={{color:"green"}}> Entreprise</span>
+      Notre<span style={{ color: "green" }}> Entreprise</span>
     </>
   ),
   description = "Bienvenue sur le site de Jean Baptiste Dugois Paysagiste, basé à ‘‘ Les Arsures’’ dans le Jura. Nous sommes spécialisés dans les aménagements extérieurs, la création de jardins, les espaces vertsbet la maçonnerie paysagère depuis 2016.",
-  primaryButtonText = "Voir pgit lus",
-  primaryButtonUrl = "https://timerse.com",
+  primaryButtonText = "Voir plus",
   imageSrc = "https://scontent.ftun4-2.fna.fbcdn.net/v/t1.15752-9/331838438_3486034298333209_7133522395279672546_n.jpg?stp=dst-jpg_p1080x2048&_nc_cat=105&ccb=1-7&_nc_sid=ae9488&_nc_ohc=LLsycdLsxEwAX-aC-X8&_nc_ht=scontent.ftun4-2.fna&oh=03_AdQeN69HYDundkZTKxic6a7Nvhdfbl0JRqLc7n0NvAFFwA&oe=642738E2",
   buttonRounded = true,
   imageRounded = true,
@@ -58,7 +61,7 @@ export default ({
   imageCss = null,
   imageDecoratorBlob = false,
   imageDecoratorBlobCss = null,
-  textOnLeft = true
+  textOnLeft = true,
 }) => {
   // The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
 
@@ -66,17 +69,28 @@ export default ({
     <Container>
       <TwoColumn>
         <ImageColumn>
-          <Image css={imageCss} src={imageSrc} imageBorder={imageBorder} imageShadow={imageShadow} imageRounded={imageRounded}/>
+          <Image
+            css={imageCss}
+            src={imageSrc}
+            imageBorder={imageBorder}
+            imageShadow={imageShadow}
+            imageRounded={imageRounded}
+          />
           {imageDecoratorBlob && <DecoratorBlob css={imageDecoratorBlobCss} />}
         </ImageColumn>
         <TextColumn textOnLeft={textOnLeft}>
           <TextContent>
-            <Subheading style={{color:"green"}}>{subheading}</Subheading>
+            <Subheading style={{ color: "green" }}>{subheading}</Subheading>
             <Heading>{heading}</Heading>
-            <Description  >{description}</Description>
-            <PrimaryButton style={{ color: 'white', backgroundColor: 'green' }} buttonRounded={buttonRounded} as="a" href={primaryButtonUrl}>
+            <Description>{description}</Description>
+            <PrimaryButton 
+              style={{ color: "white", backgroundColor: "green" }}
+              buttonRounded={buttonRounded}
+              as="a"
+              href="/aboutus"
+            >
               {primaryButtonText}
-            </PrimaryButton >
+            </PrimaryButton>
           </TextContent>
         </TextColumn>
       </TwoColumn>
