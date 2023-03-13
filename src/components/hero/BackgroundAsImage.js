@@ -23,7 +23,7 @@ const StyledHeader = styled(Header)`
 `;
 const Container = styled.div`
   ${tw`relative -mx-8 -mt-8 bg-center bg-cover`}
-  background-image: url("https://images.unsplash.com/photo-1472553384749-8596bacb90c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+  background-image: url("https://media.routard.com/image/50/6/coucher_de_soleil_sur_l_ile_aux_flamants_roses.1378506.jpg");
 `;
 
 const OpacityOverlay = tw.div`z-10 absolute inset-0 bg-primary-500 opacity-10 `;
@@ -75,22 +75,19 @@ export default
       Notre entreprise
       </NavLink>
       <NavLink  style={{fontWeight:"bold",margin:"10px"}}  href="#">
-      Aménagements extérieurs
+      Nos Services
       </NavLink>
       <NavLink  style={{fontWeight:"bold",margin:"10px"}} href="#">
-      Entretien espaces verts
+      Nos projets
       </NavLink>
       <NavLink   style={{fontWeight:"bold",margin:"10px"}} href="#">
       Nos réalisations
       </NavLink>
     
-      <NavLink   style={{fontWeight:"bold",margin:"10px"}} href="#">
-      Mentions légales
-
-      </NavLink>
+  
     </NavLinks>,
     <NavLinks key={2}>
-      <PrimaryLink style={{backgroundColor:"#578E44", fontWeight:"bold"}} href="/#">
+      <PrimaryLink style={{backgroundColor:"#f4a261", fontWeight:"bold"}} href="/#">
       Contact
       </PrimaryLink>
     </NavLinks>
@@ -103,11 +100,11 @@ export default
         <StyledHeader marginTop="10px"  links={navLinks} />
         <TwoColumn style={{paddingTop:"50px"}}>
           <LeftColumn>
-            <Notification>Dugois Paysages</Notification>
+            <Notification>Decouvrir Djerba !</Notification>
             <Heading>
-              <span>Aménagements extérieurs</span>
+              <span>Notre Agence de voyage</span>
               <br />
-              <SlantedBackground style={{color:"#578E44" }}>Un jardin qui vous ressemble.</SlantedBackground>
+              <SlantedBackground style={{color:"#d4a373" }}>Vivre la meilleur experience .</SlantedBackground>
             </Heading>
             <PrimaryAction >En Savoir Plus</PrimaryAction>
           </LeftColumn>
